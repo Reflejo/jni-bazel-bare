@@ -5,5 +5,5 @@ class Jni {
     System.loadLibrary("hello_world")
   }
 
-  external fun hello(): String
+  external fun hello(instance: SomeClass)
 }
