@@ -1,0 +1,25 @@
+workspace_type: android
+
+directories:
+  -bazel-bin
+  -bazel-instant-android
+  -bazel-out
+  -bazel-testlogs
+  -buck-out
+  -build
+  .
+
+import_run_configurations:
+  ide/x86.xml
+  ide/arm64.xml
+
+targets:
+  //:hello_world
+
+additional_languages:
+  kotlin
+  java
+  android
+  c
+
+android_sdk_platform: android-29

@@ -1,0 +1,142 @@
+##### ANDROID #####
+
+# Built application files
+*.aab
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Intellij Bazel Plugin
+.ijwb
+
+# Android Studio Bazel Plugin
+.aswb
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+*.jar
+artifacts/
+bazel_build_query.txt
+bazel_test_query.txt
+bazel_build_shard.txt
+
+# Gradle files
+.gradle/
+
+# Buck files
+BUCK
+!buck/
+buck-out/
+.buckd/
+.okbuck/state
+.okbuck/workspace/buck_binary
+!.okbuck/workspace/manifest-merger/BUILD
+!.okbuck/workspace/manifest-merger/manifest-merger-cli.jar
+/third_party/com.lyft.idl-android/
+/third_party/idl/
+.buckconfig.local
+/tools/buck/targets_meta.bzl
+/tools/bazel/targets_meta.bzl
+
+# Bazel files
+/bazel-*
+
+# Log Files
+*.log
+
+# UI Tests
+/*.output
+/results
+/scripts/ui-tests/bubble/create_payload.json
+
+/.client-tooling/events/
+tmp/
+third_party/io.envoyproxy.envoymobile/envoy.aar
+
+##### ANDROID #####
+captures/
+
+##### IntelliJ #####
+*.iml
+*.iml___jb_tmp___
+*jb_old*
+
+## Directory-based project format:
+.idea/*
+!.idea/OWNERS
+!.idea/codeInsightSettings.xml
+!.idea/inspectionProfiles
+# Keep the old file under version control, but as deleted.
+!.idea/codeStyleSettings.xml
+
+# Mongo Explorer plugin:
+# .idea/mongoSettings.xml
+
+## File-based project format:
+*.ipr
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# IntelliJ project backup files that can be created on IJ update.
+/projectFilesBackup
+
+##### IntelliJ #####
+
+##### Maven #####
+
+target/
+gen-external-apklibs/
+
+##### Maven #####
+
+## OSX ##
+
+.DS_Store
+.metadata_never_index
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Automation
+*.pyc
+.cache
+*junit.xml
+test-artifacts
+ui_virtualenv_android
+instrumentation-tmp/
+
+# Emacs
+*~
+
+# Mainframer: Remote builds.
+.mainframer/config
+
+# vscode
+/.vscode
+
+# mypy
+.mypy_cache
+
+# Buildkite CI
+.buildkite/pipeline.json
+/ci-artifacts
