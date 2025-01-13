@@ -1,0 +1,2 @@
+common --enable_bzlmod
+common --android_platforms=@rules_android//:armeabi-v7a,@rules_android//:arm64-v8a

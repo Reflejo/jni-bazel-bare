@@ -1,0 +1,38 @@
+module(name = "jni-bazel-bare")
+
+bazel_dep(name = "rules_kotlin", version = "2.1.0")
+bazel_dep(name = "rules_android", version = "0.6.0")
+
+bazel_dep(name = "rules_java", version = "8.6.3")
+bazel_dep(name = "rules_jvm_external", version = "6.6")
+
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
+
+bazel_dep(name = "rules_android_ndk", version = "0.1.2")
+
+#android_sdk_repository_extension = use_extension("@rules_android//rules/android_sdk_repository:rule.bzl", "android_sdk_repository_extension")
+#android_sdk_repository_extension.configure(api_level = 34)
+#use_repo(android_sdk_repository_extension, "androidsdk")
+
+android_ndk_repository_extension = use_extension("@rules_android_ndk//:extension.bzl", "android_ndk_repository_extension")
+android_ndk_repository_extension.configure(api_level = 23)
+use_repo(android_ndk_repository_extension, "androidndk")
+
+register_toolchains(
+#    "@androidsdk//:sdk-toolchain",
+#    "@androidsdk//:all",
+    "@androidndk//:all",
+)
+
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+
+maven.install(
+    artifacts = [
+        "org.seleniumhq.selenium:selenium-java:4.26.0",
+    ],
+    repositories = [
+        "https://repo1.maven.org/maven2",
+    ]
+)
+
+use_repo(maven, "maven")

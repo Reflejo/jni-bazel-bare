@@ -1,11 +1,12 @@
-load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_android_library")
+load("@rules_kotlin//kotlin:android.bzl", "kt_android_library")
 
 android_binary(
     name = "hello_world",
+    incremental_dexing = False,
     custom_package = "io.fzed.helloworldjni",
     manifest = "AndroidManifest.xml",
     deps = [
-        "hello_world_kt_lib",
+        ":hello_world_kt_lib",
     ],
 )
 
@@ -17,7 +18,6 @@ kt_android_library(
     ],
     custom_package = "io.fzed.helloworldjni",
     manifest = "AndroidManifest.xml",
-    resource_files = glob(["res/**"]),
     deps = [
         ":jni_lib",
     ],
